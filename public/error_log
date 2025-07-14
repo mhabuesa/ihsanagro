@@ -1,0 +1,25 @@
+[25-Sep-2024 23:16:00 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php:7
+Stack trace:
+#0 /home/cinenest/ihsan.chishtibd.com/public/clear_cache.php(2): require_once()
+#1 {main}
+  thrown in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php on line 7
+[25-Sep-2024 23:16:18 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php:7
+Stack trace:
+#0 /home/cinenest/ihsan.chishtibd.com/public/clear_cache.php(2): require_once()
+#1 {main}
+  thrown in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php on line 7
+[25-Sep-2024 23:16:43 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php:7
+Stack trace:
+#0 /home/cinenest/ihsan.chishtibd.com/public/clear_cache.php(2): require_once()
+#1 {main}
+  thrown in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php on line 7
+[25-Sep-2024 23:17:38 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php:7
+Stack trace:
+#0 /home/cinenest/ihsan.chishtibd.com/public/clear_cache.php(2): require_once()
+#1 {main}
+  thrown in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php on line 7
+[25-Sep-2024 23:17:44 UTC] PHP Fatal error:  Uncaught Error: Class "Illuminate\Foundation\Application" not found in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php:7
+Stack trace:
+#0 /home/cinenest/ihsan.chishtibd.com/public/clear_cache.php(2): require_once()
+#1 {main}
+  thrown in /home/cinenest/ihsan.chishtibd.com/bootstrap/app.php on line 7
