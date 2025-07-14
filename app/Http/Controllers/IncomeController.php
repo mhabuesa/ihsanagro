@@ -51,7 +51,7 @@ class IncomeController extends Controller
 
         }
 
-        return redirect()->route('income')->with('added', 'আয় যুক্ত সফল হয়েছে।');
+        return redirect()->back()->with('added', 'আয় যুক্ত সফল হয়েছে।');
 
     }
 

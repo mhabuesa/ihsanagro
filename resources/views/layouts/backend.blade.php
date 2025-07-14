@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-        <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
     {{-- Title Dynamic Code --}}
@@ -46,14 +46,11 @@
             $page_title = 'আয়';
         } elseif ($title == 'user') {
             $page_title = 'ইউজার';
-        }
-        elseif ($title == 'expense_profile') {
+        } elseif ($title == 'expense_profile') {
             $page_title = 'প্রফাইল তালিকা';
-        }
-        elseif ($title == 'expense_profile_show') {
+        } elseif ($title == 'expense_profile_show') {
             $page_title = 'প্রফাইল তালিকা';
-        }
-        elseif ($title == 'expense_profile_filter') {
+        } elseif ($title == 'expense_profile_filter') {
             $page_title = 'প্রফাইল ফিল্টার';
         }
     @endphp
@@ -180,6 +177,24 @@
         .dt-length label {
             display: none;
         }
+
+        @font-face {
+            font-family: 'SolaimanLipi';
+            src: url('{{ asset('backend/fonts/solaimanlipi.woff') }}') format('truetype');
+        }
+
+        body {
+            margin: 0;
+            font-family: SolaimanLipi;
+            font-size: var(--bs-body-font-size);
+            font-weight: var(--bs-body-font-weight);
+            line-height: var(--bs-body-line-height);
+            color: var(--bs-body-color);
+            text-align: var(--bs-body-text-align);
+            background-color: var(--bs-body-bg);
+            -webkit-text-size-adjust: 100%;
+            -webkit-tap-highlight-color: rgba(75, 70, 92, 0)
+        }
     </style>
 
 </head>
@@ -190,12 +205,6 @@
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar  ">
         <div class="layout-container">
-
-
-
-
-
-
 
             <!-- Menu -->
 
@@ -278,7 +287,8 @@
                                 </a>
                             </li>
 
-                            <li class="menu-item
+                            <li
+                                class="menu-item
                                 {{ $title == 'expense' ? 'active' : '' }}
                                 ">
                                 <a href="{{ route('expense') }}" class="menu-link">
@@ -286,7 +296,8 @@
                                 </a>
                             </li>
 
-                            <li class="menu-item
+                            <li
+                                class="menu-item
                                 {{ $title == 'expense_profile' ? 'active' : '' }}
                                 {{ $title == 'expense_profile_show' ? 'active' : '' }}
                                 {{ $title == 'expense_profile_filter' ? 'active' : '' }}
@@ -323,7 +334,8 @@
                             </a>
                             </li> --}}
 
-                            <li class="menu-item
+                            <li
+                                class="menu-item
                             {{ $title == 'dueList' ? 'active' : '' }}
                             ">
                                 <a href="{{ route('due.list') }}" class="menu-link">
@@ -408,7 +420,7 @@
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
 
                             <!-- Message -->
-                           <!--/ <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
+                            <!--/ <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-expanded="false">
                                     <i class="ti ti-mail ti-md"></i>
