@@ -92,7 +92,7 @@ class ProjectController extends Controller
         if ($endDate) {
             $incomesQuery->whereDate('created_at', '<=', $endDate);
         }
-        $incomes = $incomesQuery->get();
+        $incomes = $incomesQuery->latest()->get();
         $total_income = $incomes->sum('amount');
 
         // ব্যয়
@@ -103,7 +103,7 @@ class ProjectController extends Controller
         if ($endDate) {
             $expensesQuery->whereDate('created_at', '<=', $endDate);
         }
-        $expenses = $expensesQuery->get();
+        $expenses = $expensesQuery->latest()->get();
         $total_expense = $expenses->sum('amount');
 
         return view('backend.project.project_details', [
