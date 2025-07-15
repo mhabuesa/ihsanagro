@@ -27,9 +27,12 @@
                                         </div>
                                         <div class="mt-3 col-lg-12 text-center">
                                             <button type="submit" class="btn btn-primary m-2">ফিল্টার করুন</button>
-                                            <a href="{{ route('project.details', $project->id) }}"
-                                                class="btn btn-info m-2">রিসেট করুন &nbsp; <i
+                                            @if (request('start_date') || request('end_date'))
+                                                <a href="{{ route('project.details', $project->id) }}"
+                                                class="btn btn-secondary m-2">রিসেট &nbsp; <i
                                                     class="fa-solid fa-rotate"></i></a>
+
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
