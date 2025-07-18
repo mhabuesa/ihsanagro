@@ -195,6 +195,39 @@
             -webkit-text-size-adjust: 100%;
             -webkit-tap-highlight-color: rgba(75, 70, 92, 0)
         }
+
+        // Spinner CSS
+        .spinner-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spinner {
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid #3498db;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 
 </head>
@@ -582,6 +615,12 @@
 
     </div>
     <!-- / Layout wrapper -->
+    <div id="form-loading-spinner" style="display: none;">
+        <div class="spinner-overlay">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
 
 
     <!-- JS -->
@@ -628,7 +667,19 @@
         });
     </script>
 
+    //loader script
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('form');
+            const spinner = document.getElementById('form-loading-spinner');
 
+            forms.forEach(function(form) {
+                form.addEventListener('submit', function() {
+                    spinner.style.display = 'block';
+                });
+            });
+        });
+    </script>
 
     @stack('script')
 
